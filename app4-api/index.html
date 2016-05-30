@@ -1,6 +1,14 @@
 <html ng-app="apiApp">
-	<body>
-		
+	<body ng-controller="mainCtrl">
+
+		<input ng-model="smurf">
+
+		<ul ng-repeat="smurf in smurfs | filter: smurf">
+			<img ng-src="{{smurf.img}}" />
+			<li>{{smurf.name}}</li>
+			<li>{{smurf.id}}</li>
+		</ul>
+
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
